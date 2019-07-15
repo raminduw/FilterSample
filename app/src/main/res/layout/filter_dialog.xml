@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSnow"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="55dip"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/closeDialogImg"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/baseline_close_black_36dp"
+                    android:tint="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/filters"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/doneDialogImg"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/baseline_done_black_36dp"
+                    android:tint="@android:color/white" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/photoLayout"
+                style="@style/FilterSectionStyle"
+                android:layout_below="@+id/headerLayout"
+                android:layout_marginTop="15dip">
+
+                <TextView
+                    style="@style/FilterLabelStyle"
+                    android:text="@string/photo" />
+
+                <RadioGroup
+                    style="@style/FilterSectionItemStyle"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/withPhoto"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/with_photo" />
+
+                    <RadioButton
+                        android:id="@+id/withoutPhoto"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/withPhoto"
+                        android:text="@string/without_photo" />
+
+                    <RadioButton
+                        android:id="@+id/allPhoto"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/withoutPhoto"
+                        android:text="@string/all" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contactLayout"
+                style="@style/FilterSectionStyle"
+                android:layout_below="@+id/photoLayout">
+
+                <TextView
+                    style="@style/FilterLabelStyle"
+                    android:text="@string/contacts" />
+
+                <RadioGroup
+
+                    style="@style/FilterSectionItemStyle"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/inContact"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/in_contacts" />
+
+                    <RadioButton
+                        android:id="@+id/notInContact"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/inContact"
+                        android:text="@string/not_in_contacts" />
+
+                    <RadioButton
+                        android:id="@+id/allContact"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/withoutPhoto"
+                        android:text="@string/all" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/favouriteLayout"
+                style="@style/FilterSectionStyle"
+                android:layout_below="@+id/contactLayout">
+
+                <TextView
+                    style="@style/FilterLabelStyle"
+                    android:text="@string/favourite" />
+
+                <RadioGroup
+
+                    style="@style/FilterSectionItemStyle"
+                    android:layout_below="@+id/contactLayout"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/inFavourite"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/in_favourite" />
+
+                    <RadioButton
+                        android:id="@+id/notInFavourite"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/inFavourite"
+                        android:text="@string/not_in_favourite" />
+
+                    <RadioButton
+                        android:id="@+id/allFavourite"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/withoutPhoto"
+                        android:text="@string/all" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/compatibilityScoreLayout"
+                style="@style/FilterSectionStyle"
+                android:layout_below="@+id/favouriteLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/compatibilityLabel"
+                    style="@style/FilterLabelStyle"
+                    android:text="@string/compatibility_score" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textCompatibilityMinValue"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="45dip"
+                        android:layout_height="45dip"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center" />
+
+                    <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                        android:id="@+id/compatibilitySeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_toLeftOf="@+id/textCompatibilityMaxValue"
+                        android:layout_toRightOf="@+id/textCompatibilityMinValue"
+                        app:bar_color="@color/bar_color"
+                        app:bar_highlight_color="@color/bar_highlight_color"
+                        app:left_thumb_color="@color/left_thumb_color"
+                        app:left_thumb_color_pressed="@color/left_thumb_color_pressed"
+                        app:right_thumb_color="@color/right_thumb_color"
+                        app:right_thumb_color_pressed="@color/right_thumb_color_pressed" />
+
+                    <TextView
+                        android:id="@+id/textCompatibilityMaxValue"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="45dip"
+                        android:layout_height="45dip"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ageLayout"
+                style="@style/FilterSectionStyle"
+                android:layout_below="@+id/compatibilityScoreLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ageLabel"
+                    style="@style/FilterLabelStyle"
+                    android:text="@string/age" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textAgeMinValue"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="45dip"
+                        android:layout_height="45dip"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center" />
+
+                    <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                        android:id="@+id/ageSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/textAgeMaxValue"
+                        android:layout_toRightOf="@+id/textAgeMinValue"
+                        app:bar_color="@color/bar_color"
+                        app:bar_highlight_color="@color/bar_highlight_color"
+                        app:left_thumb_color="@color/left_thumb_color"
+                        app:left_thumb_color_pressed="@color/left_thumb_color_pressed"
+                        app:right_thumb_color="@color/right_thumb_color"
+                        app:right_thumb_color_pressed="@color/right_thumb_color_pressed" />
+
+                    <TextView
+                        android:id="@+id/textAgeMaxValue"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="45dip"
+                        android:layout_height="45dip"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/heightLayout"
+                style="@style/FilterSectionStyle"
+                android:layout_below="@+id/ageLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/heightLabel"
+                    style="@style/FilterLabelStyle"
+                    android:text="@string/height" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textHeightMinValue"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="45dip"
+                        android:layout_height="45dip"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center" />
+
+                    <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                        android:id="@+id/heightSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/textHeightMaxValue"
+                        android:layout_toRightOf="@+id/textHeightMinValue"
+                        app:bar_color="@color/bar_color"
+                        app:bar_highlight_color="@color/bar_highlight_color"
+                        app:left_thumb_color="@color/left_thumb_color"
+                        app:left_thumb_color_pressed="@color/left_thumb_color_pressed"
+                        app:right_thumb_color="@color/right_thumb_color"
+                        app:right_thumb_color_pressed="@color/right_thumb_color_pressed" />
+
+                    <TextView
+                        android:id="@+id/textHeightMaxValue"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="45dip"
+                        android:layout_height="45dip"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/distanceLayout"
+                style="@style/FilterSectionStyle"
+                android:layout_below="@+id/heightLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/distanceLabel"
+                    style="@style/FilterLabelStyle"
+                    android:text="@string/distance" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textDistanceMinValue"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="45dip"
+                        android:layout_height="45dip"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center" />
+
+                    <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+                        android:id="@+id/distanceSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/textDistanceMaxValue"
+                        android:layout_toRightOf="@+id/textDistanceMinValue"
+                        app:bar_color="@color/bar_color"
+                        app:bar_highlight_color="@color/bar_highlight_color"
+                        app:left_thumb_color="@color/left_thumb_color"
+                        app:left_thumb_color_pressed="@color/left_thumb_color_pressed"
+                        app:right_thumb_color="@color/right_thumb_color"
+                        app:right_thumb_color_pressed="@color/right_thumb_color_pressed" />
+
+                    <TextView
+                        android:id="@+id/textDistanceMaxValue"
+                        style="@style/FilterSectionTextViewStyle"
+                        android:layout_width="45dip"
+                        android:layout_height="45dip"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:text="" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

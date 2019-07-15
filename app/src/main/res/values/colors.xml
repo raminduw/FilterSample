@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  <color name="colorPrimary">#008577</color>
+      <color name="colorPrimaryDark">#00574B</color>
+      <color name="colorAccent">#D81B60</color>
+      <color name="colorSnow">#fffafa</color>-->
+
+    <color name="colorPrimary">#673AB7</color>
+    <color name="primaryLightColor">#c158dc</color>
+    <color name="colorPrimaryDark">#512DA8</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="colorSnow">#fffafa</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="fabColour">#BB86FC</color>
+    <color name="listItemText">#2196F3</color>
+
+
+    <color name="colorText">#8c8c8c</color>
+    <color name="bar_color">#ebccff</color>
+    <color name="bar_highlight_color">#e0b3ff</color>
+    <color name="left_thumb_color">#b84dff</color>
+    <color name="right_thumb_color">#b84dff</color>
+    <color name="left_thumb_color_pressed">#ad33ff</color>
+    <color name="right_thumb_color_pressed">#ad33ff</color>
+
+
+
+</resources>
+
+

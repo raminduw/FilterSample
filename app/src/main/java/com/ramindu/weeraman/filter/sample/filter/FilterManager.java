@@ -2,7 +2,7 @@ package com.ramindu.weeraman.filter.sample.filter;
 
 import com.ramindu.weeraman.filter.sample.data.model.UserItem;
 import com.ramindu.weeraman.filter.sample.filter.filtertypes.FilterTypes;
-import com.ramindu.weeraman.filter.sample.utils.GeoDistanceCalculator;
+import com.ramindu.weeraman.filter.sample.di.DistanceCalculateModule;
 
 import java.util.HashMap;
 
@@ -13,10 +13,10 @@ import dagger.Module;
 @Module
 public class FilterManager {
 
-    private GeoDistanceCalculator geoDistanceCalculator;
+    private DistanceCalculateModule geoDistanceCalculator;
 
     @Inject
-    public FilterManager(GeoDistanceCalculator geoDistanceCalculator) {
+    public FilterManager(DistanceCalculateModule geoDistanceCalculator) {
         this.geoDistanceCalculator = geoDistanceCalculator;
     }
 

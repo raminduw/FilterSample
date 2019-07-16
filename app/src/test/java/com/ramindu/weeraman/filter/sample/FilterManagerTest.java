@@ -2,6 +2,7 @@ package com.ramindu.weeraman.filter.sample;
 
 import com.ramindu.weeraman.filter.sample.data.model.UserItem;
 import com.ramindu.weeraman.filter.sample.data.remote.UserApi;
+import com.ramindu.weeraman.filter.sample.di.DistanceCalculateModule;
 import com.ramindu.weeraman.filter.sample.filter.Filter;
 import com.ramindu.weeraman.filter.sample.filter.FilterManager;
 import com.ramindu.weeraman.filter.sample.filter.FilterOptionMap;
@@ -13,7 +14,6 @@ import com.ramindu.weeraman.filter.sample.filter.filtertypes.FavouriteFilter;
 import com.ramindu.weeraman.filter.sample.filter.filtertypes.FilterTypes;
 import com.ramindu.weeraman.filter.sample.filter.filtertypes.HeightFilter;
 import com.ramindu.weeraman.filter.sample.filter.filtertypes.PhotoFilter;
-import com.ramindu.weeraman.filter.sample.utils.GeoDistanceCalculator;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -33,7 +33,7 @@ public class FilterManagerTest {
     FilterManager filterManager;
     UserItem loggedUser;
     UserItem userItem;
-    GeoDistanceCalculator geoDistanceCalculator;
+    DistanceCalculateModule geoDistanceCalculator;
 
     @Before
     public void before() throws Exception {
@@ -41,7 +41,7 @@ public class FilterManagerTest {
         filterOptions = mock(FilterOptionMap.class);
         loggedUser = mock(UserItem.class);
         userItem = mock(UserItem.class);
-        geoDistanceCalculator = mock(GeoDistanceCalculator.class);
+        geoDistanceCalculator = mock(DistanceCalculateModule.class);
         filterManager = new FilterManager(geoDistanceCalculator);
     }
 

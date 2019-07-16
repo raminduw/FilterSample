@@ -9,7 +9,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.ramindu.weeraman.filter.sample.MockInstrumentalTestRunner"
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {

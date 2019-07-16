@@ -21,7 +21,7 @@ public class UserAdapter extends RecyclerView.Adapter<TextViewHolder> {
 
     @Override
     public TextViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
         return new TextViewHolder(view);
     }
 

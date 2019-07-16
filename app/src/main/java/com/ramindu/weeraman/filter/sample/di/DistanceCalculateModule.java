@@ -1,4 +1,4 @@
-package com.ramindu.weeraman.filter.sample.utils;
+package com.ramindu.weeraman.filter.sample.di;
 
 import android.location.Location;
 
@@ -9,10 +9,10 @@ import javax.inject.Inject;
 import dagger.Module;
 
 @Module
-public class GeoDistanceCalculator {
+public class DistanceCalculateModule {
 
     @Inject
-    public GeoDistanceCalculator() {
+    public DistanceCalculateModule() {
 
     }
 

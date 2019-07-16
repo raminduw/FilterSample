@@ -19,7 +19,7 @@ Testing URL -  https://testmockapi-d23bc.firebaseio.com/matches.json</br>
 
 ### Assumptions:
 Used logged user's Locations as below.</br>
-Lat :53.801277
+Lat :53.801277</br>
 Lon :-1.548567 
 
 ### Filtering:

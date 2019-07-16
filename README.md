@@ -22,12 +22,20 @@ Used logged user's Locations as below.</br>
 Lat :53.801277
 Lon :-1.548567 
 
-### Notes:
-Web API does not support any filtering and client side filtering applied.(Hosted on Firebase as a json)
-Application support both Landsacape and Portrait modes.
+### Filtering:
+Web API does not support any filtering and client side filtering applied.(Hosted on Firebase as a json).
+Applciation initially downlaod all the users from API and filter locallay when filter applies.
+If application screen oriantation change, app will not call the API again to retrieve data.
 
-### Screens
+### Notes:
+Application support both Landsacape and Portrait modes.</br>
+Supportmultple screen sizes.
+
+### Testing:
+Repository and View model unit tested using JUnit and Mockito.</br>
+Activity UI tested using Espresso.</br>
+
+### Screens:
 ![list_view](https://user-images.githubusercontent.com/5441853/61299244-4b6fb300-a812-11e9-8bc7-83cca21815a0.png)
 </br></br>
-
 ![filter_view](https://user-images.githubusercontent.com/5441853/61299249-4d397680-a812-11e9-81ae-d4d6a2ce3098.png)

@@ -23,5 +23,4 @@ Lat :53.801277
 Lon :-1.548567
 
 ### Screens
-![list_view](https://user-images.githubusercontent.com/5441853/61299086-02b7fa00-a812-11e9-8321-5b831b64047e.png)
-![filter_view](https://user-images.githubusercontent.com/5441853/61299088-051a5400-a812-11e9-8c0b-158d1464d353.png)
+

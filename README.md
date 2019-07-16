@@ -20,7 +20,11 @@ Testing URL -  https://testmockapi-d23bc.firebaseio.com/matches.json</br>
 ### Assumptions:
 Used logged user's Locations as below.</br>
 Lat :53.801277
-Lon :-1.548567
+Lon :-1.548567 
+
+### Notes:
+Web API does not support any filtering and client side filtering applied.(Hosted on Firebase as a json)
+Application support both Landsacape and Portrait modes.
 
 ### Screens
 ![list_view](https://user-images.githubusercontent.com/5441853/61299244-4b6fb300-a812-11e9-8bc7-83cca21815a0.png)

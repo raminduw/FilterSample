@@ -29,7 +29,7 @@ If application screen oriantation change, app will not call the API again to ret
 
 ### Notes:
 Application support both Landsacape and Portrait modes.</br>
-Supportmultple screen sizes.
+Support multiple screen sizes.
 
 ### Testing:
 Repository and View model unit tested using JUnit and Mockito.</br>
